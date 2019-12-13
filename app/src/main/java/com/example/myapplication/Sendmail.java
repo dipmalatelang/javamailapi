@@ -99,7 +99,7 @@ public class Sendmail extends AsyncTask<Void,Void,Void> {
             //Sending email
             Transport.send(mm);
 
-        } catch (MessagingException e) {
+        } catch (MessagingException | RuntimeException e) {
             e.printStackTrace();
         }
         return null;
